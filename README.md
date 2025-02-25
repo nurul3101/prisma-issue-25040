@@ -15,10 +15,14 @@ import prisma from "../lib/prisma";
 import { prismaWithoutAccelerate } from "../lib/prisma";
 ```
 
+![Prisma Server Action Working](./prisma-server-action-working.png)
+
 If you uncomment this line you will get the PrismaClient cannot be used in browser error as expected.
 
 ```
 //console.log(prisma, prismaWithoutAccelerate);
 ```
+
+![Prisma Server Action Error](./prisma-server-action-error.png)
 
 So, the issue occurs only if PrismaClient is used in the client side component, just importing it doesn't cause any issue.
